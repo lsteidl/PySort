@@ -13,7 +13,7 @@ for x in range(10):
 ######
 print "Random Array"
 for x in random_array:
-    print x
+    print x,
 
 lowest = 100
 index = 0 ## index of lowest
@@ -31,9 +31,17 @@ for x in random_array:
     random_array[index] = random_array[x_index]
     random_array[x_index] = lowest
     x_index += 1
-    lowest = 100
+    lowest = 1000
 
-# display sorted array
-print "Sorted Array"
+print #spacing
+#display built-in sorting of array
+print "Built-in Sort Function"
+sort_func_array.sort()
+for x in sort_func_array:
+    print x,
+
+# display manual sorted array
+print #spacing
+print "Manual Sorted Array"
 for x in random_array:
-    print x
+    print x,
