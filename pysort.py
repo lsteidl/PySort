@@ -20,11 +20,11 @@ print("Random Array")
 for x in random_array:
     print(x, end=" ")
 
-lowest = 100
+lowest = 100 ## all numbers will be lower than this value
 index = 0 ## index of lowest
-x_index = 0
+x_index = 0 # hold index for outer loop
 for x in random_array:
-    y_index = 0
+    y_index = 0 #hold index for inner loop
     for y in random_array:
         if(y_index < x_index):
             y_index += 1
@@ -32,15 +32,17 @@ for x in random_array:
         if(y < lowest):
             lowest = y
             index = y_index 
-        y_index += 1
-    random_array[index] = random_array[x_index]
+        y_index += 1 #increment inner loop index
+    #perform int swap
+    random_array[index] = random_array[x_index] 
     random_array[x_index] = lowest
-    x_index += 1
-    lowest = 1000
+    x_index += 1 #increment outer loop index
+    lowest = 1000 #reset lowest so next lowest can be found
 
 print() #spacing
 #display built-in sorting of array
 print("Built-in Sort Function")
+#sort array in ascending order
 sort_func_array.sort()
 for x in sort_func_array:
     print(x, end=" ")
