@@ -5,8 +5,9 @@ random_array = [] #initialize empty array to hold random values
 sort_func_array = [] # empty array to sort with built in method
 number = 0 # holds each randomly generated value
 
-
-
+total = input("Enter length of random array: ")
+print("You chose length: " + total)
+total = int(total)
 # fill array with number of random values specified 
 for x in range(total):
   number = random.randint(1,100) #10 random values of numbers between 1 and 100
@@ -68,7 +69,8 @@ if(total % 2 == 0):
     right = int( (total/2)-1 )
     median = ( random_array[left] + random_array[right] ) / 2
 else:
-    median = random_array[((total + 1) / 2)]
+    center = int(((total + 1) / 2))
+    median = random_array[center]
 #display Median
 print("Median: " + str(median))
 ##print median
