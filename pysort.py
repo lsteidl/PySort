@@ -1,12 +1,13 @@
 import random
 
 random_array = [] #initialize empty array to hold random values
+sort_func_array = [] # empty array to sort with built in method
 number = 0 # holds each randomly generated value
 
 for x in range(10):
   number = random.randint(1,101) #10 random values of numbers between 1 and 100
-  print random
   random_array.append(number)
+  sort_func_array.append(number)
 
 # display original random array
 ######
@@ -17,15 +18,15 @@ for x in random_array:
 lowest = 100
 index = 0 ## index of lowest
 x_index = 0
-y_index = 0
 for x in random_array:
+    y_index = 0
     for y in random_array:
         if(y_index < x_index):
             y_index += 1
             continue
         if(y < lowest):
             lowest = y
-            index = y_index
+            index = y_index 
         y_index += 1
     random_array[index] = random_array[x_index]
     random_array[x_index] = lowest
