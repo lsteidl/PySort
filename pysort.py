@@ -37,7 +37,7 @@ for x in random_array:
     x_index += 1
     lowest = 1000
 
-print #spacing
+print() #spacing
 #display built-in sorting of array
 print("Built-in Sort Function")
 sort_func_array.sort()
@@ -45,7 +45,7 @@ for x in sort_func_array:
     print(x, end=" ")
 
 # display manual sorted array
-print #spacing
+print() #spacing
 print("Manual Sorted Array")
 for x in random_array:
     print(x, end=" ")
@@ -56,7 +56,7 @@ for x in random_array:
     sum += x
 average = sum / total
 #display Mean
-print #spacing
+print() #spacing
 print("Mean: " + str(average))
 ##print average
 
